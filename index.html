@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elevate Summer 2026 Potluck</title>
+<meta name="description" content="Sign up for the Elevate Strength &amp; Conditioning summer potluck.">
+<link rel="icon" href="https://images.squarespace-cdn.com/content/v1/5f0ccc6d6cff7b41c87cc489/f6ee9988-cb8a-44c4-a808-d8c832a5d6cd/Elevate_S%26C_MultiColor_Logo.png?format=500w">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600;700&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0A0A0B; --paper:#FBFAF7; --card:#fff; --line:#E2DFD8; --muted:#6B6B70; --text:#1A1A1E;
+    --red:#E31E26; --orange:#F68D1E; --green:#098040; --blue:#3F5EAA; --purple:#712980; --gray:#6B7280;
+    --rainbow:linear-gradient(90deg,var(--red),var(--orange),#FDED0B,var(--green),var(--blue),var(--purple));
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--text);
+    font-family:'Hanken Grotesk',system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;width:100%;height:clamp(230px,40vw,360px);overflow:hidden;background:linear-gradient(118deg,#7a1f12 0%,#b5471a 26%,#0d5c3f 60%,#28346b 100%)}
+  .hero video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .hero .scrim{position:absolute;inset:0;background:
+      radial-gradient(120% 90% at 50% 0%, rgba(0,0,0,.05), rgba(0,0,0,.4)),
+      linear-gradient(180deg, rgba(0,0,0,.15) 0%, rgba(0,0,0,.62) 100%)}
+  .hero .inner{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;
+    text-align:center;padding:0 18px 22px}
+  .hero img.logo{width:clamp(58px,11vw,84px);height:auto;filter:drop-shadow(0 4px 14px rgba(0,0,0,.5));margin-bottom:10px}
+  .hero h1{font-family:'Zilla Slab',serif;font-weight:700;text-transform:uppercase;letter-spacing:.02em;
+    color:#fff;margin:0;font-size:clamp(26px,6vw,44px);line-height:1;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+  .hero .tag{color:#fff;opacity:.92;font-weight:600;font-size:clamp(13px,3.4vw,16px);margin-top:8px;text-shadow:0 1px 10px rgba(0,0,0,.6)}
+  .ribbon{height:5px;background:var(--rainbow)}
+
+  /* ---------- content ---------- */
+  .wrap{max-width:720px;margin:0 auto;padding:26px 18px 44px}
+  .block{margin-bottom:30px}
+  .colhead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 2px 6px}
+  .colhead .tick{width:28px;height:5px;border-radius:3px;background:var(--rainbow)}
+  .colhead h2{font-family:'Zilla Slab',serif;font-weight:700;text-transform:uppercase;letter-spacing:.03em;font-size:20px;margin:0;color:var(--ink)}
+  .count{font-size:13px;font-weight:700;color:#fff;background:var(--ink);border-radius:999px;padding:2px 10px}
+  .refresh{margin-left:auto;font:inherit;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:none;border:none;cursor:pointer;padding:3px}
+  .refresh:hover{color:var(--ink)}
+  .rule{height:2px;background:var(--rainbow);opacity:.5;border-radius:2px;margin:0 2px 12px}
+
+  /* form */
+  .formcard{background:var(--card);border:1px solid var(--line);border-radius:14px;
+    box-shadow:0 1px 2px rgba(10,10,11,.04),0 12px 26px -18px rgba(10,10,11,.3);padding:16px 16px 18px}
+  label.fld{display:block;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin:0 0 5px}
+  .field{margin-bottom:12px}
+  input[type=text]{width:100%;font:inherit;font-size:15px;color:var(--text);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:11px 12px;transition:border-color .15s,box-shadow .15s}
+  input[type=text]:focus{outline:none;border-color:var(--ink);box-shadow:0 0 0 3px rgba(63,94,170,.18)}
+  ::placeholder{color:#aaa}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{position:relative;font-size:13px;font-weight:600;cursor:pointer;user-select:none;border:1.5px solid var(--line);background:#fff;color:var(--text);padding:8px 13px;border-radius:999px;display:inline-flex;align-items:center;gap:7px;transition:transform .08s,border-color .15s,background .15s,color .15s}
+  .chip input{position:absolute;opacity:0;pointer-events:none}
+  .chip .dot{width:9px;height:9px;border-radius:50%;background:var(--c,#ccc)}
+  .chip:hover{border-color:#c9c5bc}
+  .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .chip:active{transform:scale(.96)}
+  .submit{margin-top:6px;width:100%;font:inherit;font-weight:800;font-size:15px;letter-spacing:.03em;text-transform:uppercase;color:#fff;background:var(--ink);border:none;border-radius:11px;padding:14px;cursor:pointer;position:relative;transition:transform .08s,opacity .15s}
+  .submit::after{content:"";position:absolute;left:14px;right:14px;bottom:7px;height:3px;border-radius:3px;background:var(--rainbow);opacity:.9}
+  .submit:hover{opacity:.93}.submit:active{transform:translateY(1px)}.submit[disabled]{opacity:.5;cursor:default}
+  .msg{margin-top:11px;font-size:14px;font-weight:600;border-radius:10px;max-height:0;overflow:hidden;transition:max-height .25s,padding .25s;padding:0}
+  .msg.show{max-height:120px;padding:11px 13px}
+  .msg.err{background:#fdeceb;color:#b71d1d}
+  .done{text-align:center;padding:26px 10px;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 2px rgba(10,10,11,.04),0 12px 26px -18px rgba(10,10,11,.3)}
+  .done .big{font-family:'Zilla Slab',serif;font-size:24px;color:var(--ink);margin-bottom:6px}
+  .done p{color:var(--muted);font-size:14px;margin:0 0 14px}
+  .again{font:inherit;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink);background:none;border:none;cursor:pointer;border-bottom:2px solid;padding:2px 0}
+  .hide{display:none}
+
+  /* list */
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:11px}
+  .cardx{position:relative;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:11px 13px 11px 17px;box-shadow:0 1px 2px rgba(10,10,11,.04),0 9px 22px -16px rgba(10,10,11,.25);overflow:hidden;animation:rise .4s ease both}
+  .cardx::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--c,var(--blue))}
+  .bringing{font-weight:700;font-size:15px;line-height:1.22;color:var(--text)}
+  .details{font-size:13px;color:var(--muted);margin-top:2px;line-height:1.3}
+  .who{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--ink);margin-top:7px;text-transform:uppercase}
+  .who span{color:var(--muted);font-weight:600;text-transform:none}
+  .state{padding:28px 16px;text-align:center;color:var(--muted);font-size:14px}
+  .state b{display:block;font-family:'Zilla Slab',serif;color:var(--ink);font-size:17px;margin-bottom:4px}
+
+  footer{text-align:center;padding:24px 16px 40px;color:var(--muted);font-size:12.5px}
+  footer .ph{font-family:'Zilla Slab',serif;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--ink);font-size:13px}
+
+  @keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important}.hero video{display:none}}
+</style>
+</head>
+<body>
+
+  <header class="hero">
+    <video autoplay muted loop playsinline poster="assets/poster.jpg">
+      <source src="assets/banner.mp4" type="video/mp4">
+    </video>
+    <div class="scrim"></div>
+    <div class="inner">
+      <img class="logo" src="https://images.squarespace-cdn.com/content/v1/5f0ccc6d6cff7b41c87cc489/f6ee9988-cb8a-44c4-a808-d8c832a5d6cd/Elevate_S%26C_MultiColor_Logo.png?format=500w" alt="Elevate Strength &amp; Conditioning">
+      <h1>Summer 2026 Potluck</h1>
+      <div class="tag">We build powerful humans — bring something delicious.</div>
+    </div>
+  </header>
+  <div class="ribbon"></div>
+
+  <main class="wrap">
+
+    <!-- FORM -->
+    <section class="block">
+      <div class="colhead"><span class="tick"></span><h2>Add your dish</h2></div>
+      <div class="rule"></div>
+
+      <form id="pf" method="POST" target="gf_sink"
+            action="PASTE_YOUR_APPS_SCRIPT_EXEC_URL_HERE" class="formcard">
+        <input type="hidden" name="token" value="elevate-potluck-2026">
+
+        <div class="field">
+          <label class="fld" for="name">Your name</label>
+          <input type="text" id="name" name="name" maxlength="80" placeholder="First name (+ last initial if needed)">
+        </div>
+
+        <div class="field">
+          <label class="fld">What are you bringing?</label>
+          <div class="chips" id="chips">
+            <label class="chip" style="--c:var(--green)"><input type="checkbox" name="category" value="Salads"><span class="dot"></span>Salads</label>
+            <label class="chip" style="--c:var(--green)"><input type="checkbox" name="category" value="Veggies"><span class="dot"></span>Veggies</label>
+            <label class="chip" style="--c:var(--red)"><input type="checkbox" name="category" value="Protein"><span class="dot"></span>Protein</label>
+            <label class="chip" style="--c:var(--orange)"><input type="checkbox" name="category" value="Snacks"><span class="dot"></span>Snacks</label>
+            <label class="chip" style="--c:var(--purple)"><input type="checkbox" name="category" value="Sweets"><span class="dot"></span>Sweets</label>
+            <label class="chip" style="--c:var(--blue)"><input type="checkbox" name="category" value="Alcoholic Beverages"><span class="dot"></span>Alcoholic Beverages</label>
+            <label class="chip" style="--c:var(--blue)"><input type="checkbox" name="category" value="Non Alcoholic Beverages"><span class="dot"></span>Non-Alcoholic</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="fld" for="details">Quantity &amp; description</label>
+          <input type="text" id="details" name="details" maxlength="200" placeholder="e.g. 50 lbs smoked salmon">
+        </div>
+
+        <button type="submit" class="submit" id="go">I’m bringing this 💪</button>
+        <div class="msg" id="msg" aria-live="polite"></div>
+      </form>
+
+      <div class="done hide" id="done">
+        <div class="big" id="bigthanks">You’re on the list! 🎉</div>
+        <p>Your dish shows up below within a minute.</p>
+        <button class="again" id="again">Add another dish</button>
+      </div>
+    </section>
+
+    <!-- LIST -->
+    <section class="block">
+      <div class="colhead">
+        <span class="tick"></span><h2>On the table so far</h2>
+        <span class="count" id="count" hidden>0</span>
+        <button class="refresh" id="refresh">↻ Refresh</button>
+      </div>
+      <div class="rule"></div>
+      <div id="out"><div class="state">Loading the list…</div></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="ph">Elevate Strength &amp; Conditioning</div>
+    Bainbridge Island · We build powerful humans
+  </footer>
+
+<iframe name="gf_sink" style="display:none" title="hidden"></iframe>
+
+<script>
+  // ---------- form ----------
+  var form=document.getElementById('pf'), go=document.getElementById('go'),
+      msg=document.getElementById('msg'), done=document.getElementById('done');
+  document.querySelectorAll('.chip input').forEach(function(cb){
+    cb.addEventListener('change',function(){cb.closest('.chip').classList.toggle('on',cb.checked);});
+  });
+  function checkedCats(){return [].filter.call(document.querySelectorAll('.chip input'),function(c){return c.checked;});}
+  function err(t){msg.className='msg show err';msg.textContent=t;}
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var name=document.getElementById('name').value.trim();
+    var details=document.getElementById('details').value.trim();
+    if(!name){return err('Add your name first.');}
+    if(checkedCats().length===0){return err('Pick at least one category so we keep the spread balanced.');}
+    if(!details){return err('Add a quantity / description (e.g. “big pan of enchiladas”).');}
+    msg.className='msg';
+    go.disabled=true; go.textContent='Adding…';
+    form.submit();
+    document.getElementById('bigthanks').textContent='You’re on the list, '+name.split(' ')[0]+'! 🎉';
+    setTimeout(function(){form.classList.add('hide');done.classList.remove('hide');load();},700);
+  });
+  document.getElementById('again').addEventListener('click',function(){
+    form.reset();
+    document.querySelectorAll('.chip').forEach(function(c){c.classList.remove('on');});
+    go.disabled=false; go.textContent='I’m bringing this 💪';
+    done.classList.add('hide'); form.classList.remove('hide');
+  });
+
+  // ---------- live list ----------
+  var SHEET_ID="1sobEUvL4_7mK_t6lAZEUrfACDem-NO8SB5MuGbPepR8", TAB="Brings", curScript=null;
+  var COLORS={"salads":"var(--green)","veggies":"var(--green)","protein":"var(--red)","carbs":"var(--orange)",
+    "snacks":"var(--orange)","sweets":"var(--purple)","alcoholic beverages":"var(--blue)","non alcoholic beverages":"var(--blue)"};
+  function esc(s){var d=document.createElement("div");d.textContent=s==null?"":String(s);return d.innerHTML;}
+  function colorFor(b){var f=String(b||"").split(",")[0].trim().toLowerCase();return COLORS[f]||"var(--gray)";}
+  window.__potluckCb=function(resp){
+    try{
+      var rows=(resp&&resp.table&&resp.table.rows)||[];
+      var data=rows.map(function(r){var c=r.c||[];function v(n){return c[n]&&c[n].v!=null?String(c[n].v).trim():"";}
+        return {name:v(0),bringing:v(1),details:v(2)};})
+        .filter(function(e){return e.name&&e.name.toLowerCase()!=="name";});
+      render(data);
+    }catch(e2){showError();}
+  };
+  function render(data){
+    var out=document.getElementById("out"),cnt=document.getElementById("count");
+    if(!data.length){out.innerHTML='<div class="state"><b>No sign-ups yet</b>Be the first — add what you’re bringing with the form above.</div>';cnt.hidden=true;return;}
+    cnt.hidden=false;cnt.textContent=data.length+(data.length===1?" dish":" dishes");
+    var html='<div class="grid">';
+    data.forEach(function(e,i){
+      html+='<div class="cardx" style="--c:'+colorFor(e.bringing)+';animation-delay:'+Math.min(i,14)*28+'ms">'
+          +'<div class="bringing">'+esc(e.bringing||"Something tasty")+'</div>'
+          +(e.details?'<div class="details">'+esc(e.details)+'</div>':'')
+          +'<div class="who"><span>by </span>'+esc(e.name)+'</div></div>';
+    });
+    out.innerHTML=html+'</div>';
+  }
+  function showError(){document.getElementById("out").innerHTML='<div class="state"><b>Couldn’t load the list</b>Make sure the sheet is shared “Anyone with the link → Viewer,” then tap ↻ Refresh.</div>';}
+  function load(){
+    if(curScript&&curScript.parentNode)curScript.parentNode.removeChild(curScript);
+    var s=document.createElement("script");
+    s.src="https://docs.google.com/spreadsheets/d/"+SHEET_ID+"/gviz/tq?sheet="+encodeURIComponent(TAB)+"&tqx=responseHandler:__potluckCb;out:json&_="+Date.now();
+    s.onerror=showError;document.body.appendChild(s);curScript=s;
+  }
+  document.getElementById("refresh").onclick=load;
+  load(); setInterval(load,60000);
+</script>
+</body>
+</html>
